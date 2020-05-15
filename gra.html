@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Gierka</title>
+ <style>
+      
+    #container
+    {
+        
+            background-image: linear-gradient(white,gold);
+            min-height:630px;
+            width: 1000px;
+            margin: auto;
+            overflow-y: hidden;
+            border: 2px solid black;
+             
+        
+    }
+      
+     #tarcza
+     {
+             
+             position: fixed; 
+            width: 15vw;
+            height: 15vw;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-image: radial-gradient(black 12%, red 12%, red 40% ,green 40%, green 75% , white 75%) ;
+           }
+        
+     button
+     { position: fixed;
+         background-color: green;
+         border: 5px solid lightgreen;
+         text-align: center;
+         font-size: 40px;
+         color: white;
+         bottom:40px;
+         right:200px;
+         padding: 0 10px;
+         border-radius: 10%;
+         
+         cursor: pointer;
+         
+     }     
+     button:hover+section
+     {
+         background-color: gray;
+         -webkit-animation-play-state: paused;
+
+     }
+
+    section
+    {
+        position: absolute;
+        width: 1vw;
+        height: 1vw;
+        background-color: blue;
+        border-radius: 50%;
+        animation: klatka 1.5s infinite linear alternate ,chaos 2s infinite  linear alternate
+        
+
+    }
+    header
+    {
+    text-align: center;
+    font-size: 40px;
+    color: green;
+    font-family: fantasy;
+    letter-spacing: 2mm;
+    
+    
+    
+
+    }
+    p
+        {
+            
+            font-size: 20px;
+            text-align: center;
+            border-top: 3px dashed  green;
+        }
+     
+    
+      
+    @keyframes klatka {
+        0%{ 
+        top:20vh;
+         left:20vh;
+         }
+         14%{
+             top:33vh;
+             left:88vh;
+         }
+         29%{
+             top:52vh;
+             left:16%;
+
+         }
+         45%{
+             top: 55%;
+             left:75%;
+         }
+         58%{
+             top:59%;
+             left:90%;
+         }
+         73%{
+             top: 50%;
+             left:60%;
+         }
+         91% {
+             top:49%;
+             left:19%;
+         }
+        
+        100%{
+        top:80%;
+        left:80%;
+        }
+    }
+    @keyframes slalom{
+
+0% {
+    transform: translate(11vh,-11vh);
+}
+10% {
+    transform: translate(-7vh,7vh);
+}
+20% {
+    transform: translate(4vh, 11vh);
+}
+40% {
+    transform: translate(8vh, -7vh);
+}
+60% {
+    transform: translate(-30vh,10vh);
+}
+80% {
+    transform: translate(40vh,9vh);
+}
+100% {
+    transform: translate(7vh,-7vh);
+}
+ }
+     
+
+ </style>
+ </head>
+ <body>
+     <div id="container">
+    <header>Przegrany stawia piwko :)</header>
+    <p>Jeżeli zastanawiacie się,kto jako pierwszy powinien postawić pyszne, chłodne piwko tego wieczoru, zagrajcie !
+        Gra polega na zatrzymaniu piłeczki w punkcie środkowym tarczy. Kto nie trafi ani razu, stawia!</p>
+    <div id="tarcza"></div>
+    <button>STOP</button>
+    <section></section>
+    
+   </div>
+   
+    
+ </body>
+ </html>
